@@ -6,6 +6,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       backgroundImage: {
@@ -34,7 +35,7 @@ module.exports = {
     },
     colors: {
       ...colors,
-      primary: colors.sky,
+      primary: colors.amber,
       secondary: colors.blue,
     },
   },

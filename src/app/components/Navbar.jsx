@@ -6,6 +6,8 @@ import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import { animateScroll as scroll } from 'react-scroll';
+import ThemeToggle from "./darkMode";
+import Theme from "../theme_config";
 
 const navLinks = [
   {
@@ -69,6 +71,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
+        <ThemeToggle />
       </div>
       {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>

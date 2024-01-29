@@ -1,8 +1,7 @@
 "use client";
-import React, { useTransition, useState, useRef, HTMLDivElement } from "react";
+import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import { motion, useTransform, useScroll } from "framer-motion";
 
 const TAB_DATA = [
   {
@@ -51,25 +50,9 @@ const AboutSection = () => {
     });
   };
 
-  const aboutref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: aboutref,
-    // offset: ["0 1", "0.7 0.8"]
-  })
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1.7])
-  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1.6])
-
   return (
-    <motion.div
-      ref = {aboutref.current}
-      // style={{
-      //   scale: scaleProgress,
-      //   opacity: opacityProgress
-      // }}
-    >
-
     <section className="items-center justify-center py-18 snap-center" id="about">
-      <div className="md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16 py-30 px-4 m-16   overflow-y-auto">
+      <div className=" md:grid md:grid-cols-2 xl:gap-16 sm:py-16 xl:px-16 py-30 px-4 m-16   overflow-y-auto">
         <div className="md:flex md:items-center md:justify-center h-fit">
           <Image className="" src="/images/two_cats.png" width={475} height={475} alt="Two pet cats" />
 
@@ -113,7 +96,6 @@ const AboutSection = () => {
         </div>
       </div>
     </section>
-    </motion.div>
   );
 };
 

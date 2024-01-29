@@ -1,13 +1,15 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
+// import { useIsVisible, slideIn } from "../animation";
 
 const HeroSection = () => {
+
   return (
-    <section className="lg:py-36 snap-center">
+    <section className="lg:py-36 snap-center" >
       <div className="grid grid-cols-1 sm:grid-cols-12">
         {/* <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -37,7 +39,7 @@ const HeroSection = () => {
               repeat={Infinity}
             /> */}
           </h1>
-          <p className="animate-slidein [--slidein-delay:500ms] opacity-0 text-[#ADB7BE] text-base mb-8 sm:text-lg mt-1 lg:text-xl">
+          <p className="animate-slidein [--slidein-delay:500ms] opacity-0 text-[#ADB7BE] text-sm mb-8 sm:text-base mt-1 lg:text-lg">
             Data Scientist. Machine Learning Engineer. Pet Lover.
           </p>
           <p className="animate-slidein [--slidein-delay:700ms] opacity-0 text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
