@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
+import { animateScroll as scroll } from 'react-scroll';
 
 const navLinks = [
   {
@@ -23,13 +24,17 @@ const navLinks = [
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   return (
-    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-50">
+    <nav className="fixed mx-auto top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-50" >
       <div className="flex container lg:py-4 flex-wrap items-center justify-between mx-auto px-4 py-2">
         <Link
           href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+          className="text-2xl md:text-5xl text-white font-semibold cursor-pointer"
+          onClick={ scrollToTop }
         >
           <Image
             src="/images/em-logo-2.png"
