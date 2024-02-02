@@ -4,12 +4,11 @@ import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
-// import { useIsVisible, slideIn } from "../animation";
 
 const HeroSection = () => {
 
   return (
-    <section className="lg:py-36 snap-center" >
+    <section className="h-screen flex justify-center items-center">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         {/* <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -39,19 +38,24 @@ const HeroSection = () => {
               repeat={Infinity}
             /> */}
           </h1>
-          <p className="animate-slidein [--slidein-delay:500ms] opacity-0 text-[#ADB7BE] text-sm mb-8 sm:text-base mt-1 lg:text-lg">
-            Data Scientist. Machine Learning Engineer. Pet Lover.
+          <p className="animate-slidein [--slidein-delay:500ms] opacity-0 text-[#ADB7BE] text-sm mb-10 sm:text-base mt-1 lg:text-lg">
+            Data Scientist. Pet Lover. Discoverer.
           </p>
+          <br/>
           <p className="animate-slidein [--slidein-delay:700ms] opacity-0 text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-            voluptuous.
+            Guess the lie! <br/><br/>
+              🐧 I hacked into a computer when I was 10. <br/> 
+              📱 I enjoy dismantling iPhones and laptops to upgrade its parts. <br/> 
+              🐕 I have a pet dog. <br/>
+
+
           </p>
           <div className="animate-slidein [--slidein-delay:900ms] opacity-0">
             <Link
               href="/#contact"
               className="glow-on-hover hover:glow px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
             >
-              Let`&apos;`s Connect
+              Let&apos;s Connect
             </Link>
             <Link
               href="/pdf/EnochMok_Resume.pdf"

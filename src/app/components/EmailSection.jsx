@@ -43,19 +43,21 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 mt-16 mb-20 md:mb-25 md:mt-32 pt-28 gap-4 relative snap-center items-center justify-center"
+      className="grid md:grid-cols-2 mt-10 mb-20 md:mb-24 md:mt-32 pt-14 gap-2 relative snap-center items-center justify-center"
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-      <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
+      <div className="items-center justify-center">
+        <h3 className="text-2xl font-bold text-white -mt-16 pb-16">
           Let&apos;s Connect!
-        </h5>
+        </h3>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {" "}
-          Find me on my socials or drop me an email! <br/>I would love to connect with you.
+          I am very excited to solve real-world issues with Data Science and ML :) <br/><br/>
+          If you have any opportunities, feel free to contact me! <br/><br/>
+          Find me on my socials or drop me an email <br/>
         </p>
         <div className="socials flex flex-row gap-2">
-          <Link href="https://www.github.com/e-mny">
+          <Link href="https://www.github.com/e-mny/">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
           <Link href="https://www.linkedin.com/in/enochmok/">
@@ -69,7 +71,7 @@ const EmailSection = () => {
             Email sent successfully!
           </p>
         ) : (
-          <form className="flex flex-col" onSubmit={handleSubmit}>
+          <form className="flex flex-col " onSubmit={handleSubmit}>
             <div className="mb-6">
               <label
                 htmlFor="email"

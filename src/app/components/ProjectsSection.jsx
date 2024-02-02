@@ -25,7 +25,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div className="snap-start py-16 scroll-mb-96">
+    <div className="snap-start py-6 scroll-mb-96">
     <section id="projects">
       <h2 className="text-center text-4xl font-bold text-white pt-16 mb-8 md:mb-12">
         My Projects
